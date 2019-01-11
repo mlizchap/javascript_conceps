@@ -1,4 +1,13 @@
 const http = require('http');
+const add = require('./section2_')
+
+/****** RUN CODE HERE ******/
+function greet(name = ' <your name here>') {
+  console.log('hello' + name)
+}
+greet('Gary');
+/***************************/
+
 
 const hostname = '127.0.0.1';
 const port = 3000;

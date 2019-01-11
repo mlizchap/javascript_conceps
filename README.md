@@ -3,6 +3,7 @@
 ## Tabe of Contents
 - [ES6](#es6)
 - [JS Stack and Queue](#js-stack-and-queue)
+- [Javascript Types](#javascript-types)
 
 
 ## ES6
@@ -29,8 +30,26 @@
 - creates a function (a new execution context) for each new event
 - browser is ansynchronously putting things into the event queue, but the code that is running is run line by line
 
-
-
+## Javascript Types
+- **Dynamically Typed**: (JS is this) the data type is figured out on the fly
+- **Statically Typed**: the data type needs to be declared or else an error will be thrown
+- **Primitive Type**: a type of data that represents a single value (not an object)
+    1. undefined: a lack of existance (you should never set a variable to this)
+    2. null: represents a lack of existance (you can set a variable to this)
+    3. boolean: true or false
+    4. number: floating point number.  Theres always some decimals.  
+    5. string: a sequence of characters
+    6. symbol: (es6)
+- **operators**: a special function that is systacially written differently.
+- **coerction**: converting a value from one type to another
+    - `==`/`!=` coerces numbers, `===`/`!==` (strict) does not use coersion
+    - falsy values (coerces to false) `false`, `0`, `"", null, undefined, NaN
+    - a few other rules:
+        - if there are string and numbers, numbers will coerce to strings
+        - if you coerce a boolean to a number, `true` coerces to `1` and `false` coerces to `0`
+        - `null` coerces to `0` but not for comparison
+        - `undefined` coerces to `undefined`
+    - [a more detailed list of rules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
 
 
 
