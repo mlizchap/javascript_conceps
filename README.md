@@ -43,13 +43,38 @@
 - **operators**: a special function that is systacially written differently.
 - **coerction**: converting a value from one type to another
     - `==`/`!=` coerces numbers, `===`/`!==` (strict) does not use coersion
-    - falsy values (coerces to false) `false`, `0`, `"", null, undefined, NaN
     - a few other rules:
         - if there are string and numbers, numbers will coerce to strings
         - if you coerce a boolean to a number, `true` coerces to `1` and `false` coerces to `0`
         - `null` coerces to `0` but not for comparison
         - `undefined` coerces to `undefined`
     - [a more detailed list of rules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+    - can use coercion to check for existance,if a variable is set but never defined - coerces to a falsy value
+        ```java
+        if (x) {
+            // do something
+        }
+        ```
+        - if x is not yet defined then the function does not do anything
+    - need to be careful because `0` is also a falsy value, to avoid this:
+        ```java 
+        if (x || x === 0) {
+            // do something
+        }
+        ```
+        - does something even if x is 0 (would normally coerce to a falsy value and not do anything)
+        - falsy values (coerces to false) `false`, `0`, `"", null, undefined, NaN
+    - can use the or (`||`) operator for default values
+        ```java
+        if (x || 'hello')
+        ```
+        - if `x` is not yet defined returns hello
+    - can also use to check colliding
+        ```java
+        var x = x || "hello"
+        ```
+        - if x is already defined, it keeps the old value rather than redine the variable
+
 
 
 
